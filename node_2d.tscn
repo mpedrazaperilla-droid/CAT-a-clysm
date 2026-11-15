@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://y8a1cq5jx3ei"]
+
+[ext_resource type="Script" uid="uid://bmkybfyrtajd8" path="res://bullet.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://bdlxsctmu1xfl" path="res://assets/IdleLoop-Sheet.png" id="1_wtcfe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8q628"]
+radius = 4.1231055
+
+[node name="Bullet" type="Node2D" unique_id=645821154]
+
+[node name="Bullet" type="Area2D" parent="." unique_id=847534340]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("1_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bullet" unique_id=1872970285]
+shape = SubResource("CircleShape2D_8q628")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bullet" unique_id=572524277]
+texture = ExtResource("1_wtcfe")
+hframes = 4
